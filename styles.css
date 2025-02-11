@@ -5,6 +5,7 @@
     --secondary-color: #b915cc;
     --text-color: #f6287d;
     --disabled-color: #a9a9a9;
+    --disabled-item: #130338;
 }
 
 *{
@@ -89,6 +90,10 @@ form{
     align-items: center;
 }
 
+.todo-item:has(input[type="checkbox"]:checked){/*selects parent with has attribute*/
+    background-color: var(--disabled-item);
+}
+
 .todo-item .todo-text{
     padding: 15px;
     padding-right: 0;
@@ -128,7 +133,7 @@ input[type="checkbox"]{
     display: none;
 }
 
-input[type="checkbox"]:checked ~ .custom-checkbox svg{
+input[type="checkbox"]:checked ~ .custom-checkbox svg{/*selects sibling*/
     fill: var(--text-color);
 }
 
