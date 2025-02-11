@@ -131,9 +131,15 @@ form{
 
 input[type="checkbox"]{
     display: none;
+
+}
+input[type="checkbox"]:hover ~ .custom-checkbox svg{/*selects sibling*/
+    fill: var(--accent-color);
+    scale: 1.4;
 }
 
 input[type="checkbox"]:checked ~ .custom-checkbox svg{/*selects sibling*/
+    scale: 1.0;
     fill: var(--text-color);
 }
 
